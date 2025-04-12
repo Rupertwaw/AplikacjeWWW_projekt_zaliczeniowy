@@ -1,0 +1,20 @@
+{% extends 'posts/base.html' %}
+
+{% block title %}Lista kategorii{% endblock %}
+
+{% block content %}
+<h2>Lista kategorii</h2>
+
+<table>
+    <tr>
+        <th>Nazwa</th>
+        <th>Opis</th>
+    </tr>
+    {% for category in categories %}
+    <tr>
+        <td>{{ category.name }}</td>
+        <td>{{ category.description }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

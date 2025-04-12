@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Moja Aplikacja{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'posts/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>🖥️ System Inwentaryzacji</h1>
+        <nav>
+            <a href="/posts/devices/">Urządzenia</a> |
+            <a href="/posts/employees/">Pracownicy</a> |
+            <a href="/posts/categories/">Kategorie</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Moja Firma</p>
+    </footer>
+</body>
+</html>

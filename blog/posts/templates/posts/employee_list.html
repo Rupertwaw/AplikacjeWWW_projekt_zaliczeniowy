@@ -1,0 +1,24 @@
+{% extends 'posts/base.html' %}
+
+{% block title %}Lista pracowników{% endblock %}
+
+{% block content %}
+<h2>Lista pracowników</h2>
+
+<table>
+    <tr>
+        <th>Imię</th>
+        <th>Nazwisko</th>
+        <th>Email</th>
+        <th>Telefon</th>
+    </tr>
+    {% for employee in employees %}
+    <tr>
+        <td>{{ employee.first_name }}</td>
+        <td>{{ employee.last_name }}</td>
+        <td>{{ employee.email }}</td>
+        <td>{{ employee.phone }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

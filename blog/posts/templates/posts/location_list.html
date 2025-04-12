@@ -1,0 +1,20 @@
+{% extends 'posts/base.html' %}
+
+{% block title %}Lista lokalizacji{% endblock %}
+
+{% block content %}
+<h2>Lista lokalizacji</h2>
+
+<table>
+    <tr>
+        <th>Nazwa lokalizacji</th>
+        <th>Opis</th>
+    </tr>
+    {% for location in locations %}
+    <tr>
+        <td>{{ location.name }}</td>
+        <td>{{ location.description }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
