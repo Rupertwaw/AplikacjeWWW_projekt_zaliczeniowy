@@ -20,19 +20,19 @@ def welcome_view(request):
 # Widoki listy
 def category_list(request):
     categories = Category.objects.all()
-    return render(request, 'category_list.html', {'categories': categories})
+    return render(request, 'posts/category_list.html', {'categories': categories})
 
 def location_list(request):
     locations = Location.objects.all()
-    return render(request, 'location_list.html', {'locations': locations})
+    return render(request, 'posts/location_list.html', {'locations': locations})
 
 def employee_list(request):
     employees = Employee.objects.all()
-    return render(request, 'employee_list.html', {'employees': employees})
+    return render(request, 'posts/employee_list.html', {'employees': employees})
 
 def device_list(request):
     devices = Device.objects.all()
-    return render(request, 'device_list.html', {'devices': devices})
+    return render(request, 'posts/device_list.html', {'devices': devices})
 
 # Szczegóły jednego urządzenia
 def device_detail(request, pk):

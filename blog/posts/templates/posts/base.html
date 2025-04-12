@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -16,12 +16,9 @@
         </nav>
     </header>
 
-    <main>
-        {% block content %}{% endblock %}
-    </main>
+    {% block content %}
+    {% endblock %}
 
-    <footer>
-        <p>&copy; 2025 Moja Firma</p>
-    </footer>
 </body>
 </html>
+
