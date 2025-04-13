@@ -1,7 +1,7 @@
 from django.urls import path
 
 from . import views
-
+from .views import add_device
 
 urlpatterns = [
     path("welcome", views.welcome_view),
@@ -14,4 +14,5 @@ urlpatterns = [
     path('devices/<int:pk>/delete/', views.device_delete, name='device_delete'),
     path('devices/category/<int:category_id>/', views.devices_by_category, name='devices_by_category'),
     path('devices/employee/<int:employee_id>/', views.devices_by_employee, name='devices_by_employee'),
+    path('devices/add/', add_device, name='add_device'),
 ]

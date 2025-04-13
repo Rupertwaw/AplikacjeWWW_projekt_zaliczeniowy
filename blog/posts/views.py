@@ -34,6 +34,17 @@ def device_list(request):
     devices = Device.objects.all()
     return render(request, 'posts/device_list.html', {'devices': devices})
 
+def add_device(request):
+    if request.method == 'POST':
+        form = DeviceForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('device_list')
+    else:
+        form = DeviceForm()
+    return render(request, 'posts/device_form.html', {'form': form})
+
+
 # Szczegóły jednego urządzenia
 def device_detail(request, pk):
     device = get_object_or_404(Device, pk=pk)
