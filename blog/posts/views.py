@@ -83,3 +83,13 @@ def devices_by_employee(request, employee_id):
     return render(request, 'devices_by_employee.html', {'devices': devices, 'employee': employee})
 
 
+# Urządzenia z danego roku
+def devices_by_year(request, year):
+    devices = Device.objects.filter(purchase_date__year=year)
+    return render(request, 'posts/device_by_year.html', {'devices': devices, 'year': year})
+
+# Urządzenia z wybranej kategorii
+def devices_by_category(request, category_id):
+    category = get_object_or_404(Category, id=category_id)
+    devices = Device.objects.filter(category=category)
+    return render(request, 'posts/device_by_category.html', {'devices': devices, 'category': category})

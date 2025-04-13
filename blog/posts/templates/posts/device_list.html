@@ -23,6 +23,7 @@
         <td>{{ device.location.name }}</td>
         <td>{{ device.assigned_to.first_name }} {{ device.assigned_to.last_name }}</td>
         <td>
+            <a href="{% url 'add_device' %}">➕ Dodaj</a>|
             <a href="{% url 'device_detail' device.pk %}">Szczegóły</a> |
             <a href="{% url 'device_edit' device.pk %}">Edytuj</a> |
             <a href="{% url 'device_delete' device.pk %}">Usuń</a>

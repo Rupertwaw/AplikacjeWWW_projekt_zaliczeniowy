@@ -1,0 +1,15 @@
+{% extends 'posts/base.html' %}
+
+{% block title %}Urządzenia z roku {{ year }}{% endblock %}
+
+{% block content %}
+  <h2>Urządzenia zakupione w roku {{ year }}</h2>
+  <ul>
+    {% for device in devices %}
+      <li>{{ device.name }} ({{ device.purchase_date }})</li>
+    {% empty %}
+      <li>Brak urządzeń w tym roku.</li>
+    {% endfor %}
+  </ul>
+  <p><a href="{% url 'device_list' %}">← Powrót do listy urządzeń</a></p>
+{% endblock %}
