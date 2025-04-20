@@ -1,3 +1,3 @@
 # AplikacjeWWW_projekt_zaliczeniowy
 
-#Test
+Repozytorium Izabeli Sierockiej
